@@ -14,6 +14,8 @@
 		8BD2C83E21A2C3B30005BD89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83C21A2C3B30005BD89 /* LaunchScreen.storyboard */; };
 		8BD2C84921A2C3B40005BD89 /* BubbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C84821A2C3B40005BD89 /* BubbleTests.swift */; };
 		8BD2C85421A2C3B40005BD89 /* BubbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C85321A2C3B40005BD89 /* BubbleUITests.swift */; };
+		8BD2C86421A2C7600005BD89 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86321A2C7600005BD89 /* Users.swift */; };
+		8BD2C86621A2C77B0005BD89 /* BubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8BD2C84F21A2C3B40005BD89 /* BubbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD2C85321A2C3B40005BD89 /* BubbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleUITests.swift; sourceTree = "<group>"; };
 		8BD2C85521A2C3B40005BD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD2C86321A2C7600005BD89 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		8BD2C86221A2C49C0005BD89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BD2C86321A2C7600005BD89 /* Users.swift */,
+				8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD2C83621A2C3B30005BD89 /* ViewController.swift in Sources */,
+				8BD2C86421A2C7600005BD89 /* Users.swift in Sources */,
 				8BD2C83421A2C3B30005BD89 /* AppDelegate.swift in Sources */,
+				8BD2C86621A2C77B0005BD89 /* BubbleMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
