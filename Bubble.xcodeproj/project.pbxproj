@@ -12,8 +12,6 @@
 		8BD2C83921A2C3B30005BD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83721A2C3B30005BD89 /* Main.storyboard */; };
 		8BD2C83B21A2C3B30005BD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83A21A2C3B30005BD89 /* Assets.xcassets */; };
 		8BD2C83E21A2C3B30005BD89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83C21A2C3B30005BD89 /* LaunchScreen.storyboard */; };
-		8BD2C84921A2C3B40005BD89 /* BubbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C84821A2C3B40005BD89 /* BubbleTests.swift */; };
-		8BD2C85421A2C3B40005BD89 /* BubbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C85321A2C3B40005BD89 /* BubbleUITests.swift */; };
 		8BD2C86421A2C7600005BD89 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86321A2C7600005BD89 /* Users.swift */; };
 		8BD2C86621A2C77B0005BD89 /* BubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B4D400A21A413FE0012E9A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8BD2C83021A2C3B30005BD89 /* Bubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD2C83321A2C3B30005BD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD2C83521A2C3B30005BD89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +43,7 @@
 		8BD2C83D21A2C3B30005BD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD2C83F21A2C3B30005BD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD2C84421A2C3B40005BD89 /* BubbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD2C84821A2C3B40005BD89 /* BubbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleTests.swift; sourceTree = "<group>"; };
-		8BD2C84A21A2C3B40005BD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD2C84F21A2C3B40005BD89 /* BubbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD2C85321A2C3B40005BD89 /* BubbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleUITests.swift; sourceTree = "<group>"; };
-		8BD2C85521A2C3B40005BD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD2C86321A2C7600005BD89 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,13 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4D400921A413FD0012E9A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D400A21A413FE0012E9A8 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8BD2C82721A2C3B30005BD89 = {
 			isa = PBXGroup;
 			children = (
 				8BD2C83221A2C3B30005BD89 /* Bubble */,
-				8BD2C84721A2C3B40005BD89 /* BubbleTests */,
-				8BD2C85221A2C3B40005BD89 /* BubbleUITests */,
 				8BD2C83121A2C3B30005BD89 /* Products */,
+				8B4D400921A413FD0012E9A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,24 +112,6 @@
 				8BD2C83F21A2C3B30005BD89 /* Info.plist */,
 			);
 			path = Bubble;
-			sourceTree = "<group>";
-		};
-		8BD2C84721A2C3B40005BD89 /* BubbleTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BD2C84821A2C3B40005BD89 /* BubbleTests.swift */,
-				8BD2C84A21A2C3B40005BD89 /* Info.plist */,
-			);
-			path = BubbleTests;
-			sourceTree = "<group>";
-		};
-		8BD2C85221A2C3B40005BD89 /* BubbleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8BD2C85321A2C3B40005BD89 /* BubbleUITests.swift */,
-				8BD2C85521A2C3B40005BD89 /* Info.plist */,
-			);
-			path = BubbleUITests;
 			sourceTree = "<group>";
 		};
 		8BD2C86121A2C4070005BD89 /* View Controllers */ = {
@@ -292,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD2C84921A2C3B40005BD89 /* BubbleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD2C85421A2C3B40005BD89 /* BubbleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
