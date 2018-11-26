@@ -13,14 +13,12 @@ import CoreLocation
 class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
 
     
-    @IBOutlet weak var MapViewMKMapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
     let manager = CLLocationManager()
     
    
-    
     override func viewDidLoad() {
       
-        
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.distanceFilter = 100
@@ -29,7 +27,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         manager.startUpdatingLocation()
         // Do any additional setup after loading the view, typically from a nib.
         
-        MapViewMKMapView.delegate = self
+        mapView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,36 +50,41 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         //print(location.coordinate.latitude, location.coordinate.longitude)
         
         //Set up region our map with map sliding
-        MapViewMKMapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: true)
         //Show User on map
-        self.MapViewMKMapView.showsUserLocation = true
+        self.mapView.showsUserLocation = true
         
         //Init les point autour de lui
-        addBubble()
+        //addBubble()
         
     }
     
     let address:[[String]] = [["Boris","37.33024596","-122.0279578","200.0"],["Naked","37.33024947","-122.0273368","20.0"],["Test","37.32475245" ,"-122.02135932","180.0"]]
     
-    func addBubble(){
+    func addBubble(_ name : String){
         
         for code in address {
             let title = code[0]
-            let coordinate = CLLocationCoordinate2DMake(Double(code[1])!,Double(code[2])!)
-            let regionRadius = Double(code[3])!
             
             
-            let regioncircle = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+            if(title == name){
+                let coordinate = CLLocationCoordinate2DMake(Double(code[1])!,Double(code[2])!)
+                let regionRadius = Double(code[3])!
+                let regioncircle = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
             
             manager.startMonitoring(for: regioncircle)
             
             let Bubble = MKPointAnnotation()
             Bubble.coordinate = coordinate;
             Bubble.title = "\(title)";
-            MapViewMKMapView.addAnnotation(Bubble)
+            mapView.addAnnotation(Bubble)
+                
+                //Vérification des radius
+                // let circle = MKCircle(center: coordinate, radius: regionRadius)
+                // MapViewMKMapView.add(circle)
+            }
             
-           // let circle = MKCircle(center: coordinate, radius: regionRadius)
-           // MapViewMKMapView.add(circle)
+          
         
         }
         
@@ -98,11 +101,11 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         
         print("exit \(region.identifier)")
         
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-      
+        //Init les point autour de lui
+        addBubble(region.identifier)
         print("enter \(region.identifier)")
     }
 }
