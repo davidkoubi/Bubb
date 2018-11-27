@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Don't have an account ? "; ObjectID = "F62-3o-rus"; */
+"F62-3o-rus.text" = "Don't have an account ? ";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "JO0-bb-V5X"; */
+"JO0-bb-V5X.text" = "Username";
+
+/* Class = "UILabel"; text = "Confirm Password"; ObjectID = "QH0-cT-2HQ"; */
+"QH0-cT-2HQ.text" = "Confirm Password";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "dw2-ip-Cil"; */
+"dw2-ip-Cil.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "eKb-mb-JFK"; */
+"eKb-mb-JFK.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "voz-jT-dIT"; */
+"voz-jT-dIT.text" = "Password";
