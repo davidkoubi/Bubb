@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Bubble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,16 +135,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85q-M1-X9r">
-                                <rect key="frame" x="163" y="20" width="48" height="647"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85q-M1-X9r">
+                                <rect key="frame" x="213.5" y="319.5" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="logoutOfApp:" destination="akW-Xn-4A8" eventType="touchUpInside" id="gkb-wA-juq"/>
+                                    <action selector="logoutOfApp:" destination="akW-Xn-4A8" eventType="touchUpInside" id="wFT-Qe-GJB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="85q-M1-X9r" firstAttribute="centerX" secondItem="VxI-0H-fkE" secondAttribute="centerX" constant="50" id="08P-r2-bph"/>
+                            <constraint firstItem="85q-M1-X9r" firstAttribute="centerY" secondItem="VxI-0H-fkE" secondAttribute="centerY" constant="1" id="ADI-5r-qLy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bxd-Py-Qky"/>
                     </view>
                 </viewController>
