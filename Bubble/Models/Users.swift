@@ -24,7 +24,17 @@ class Users {
         View.append(view)
     }
     
+    func removeToview(_ view: BubbleMessage){
+        var t : Int = 0
+        for bub in View{
+            if(bub.title == view.title){
+                View.remove(at: t)
+            }
+            t += 1
+        }
+    }
     var allView: [BubbleMessage] {
         return View
     }
+    
 }

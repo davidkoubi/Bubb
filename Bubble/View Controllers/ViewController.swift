@@ -21,7 +21,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
       
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.distanceFilter = 100
+        //manager.distanceFilter = 100              Permet d'actualiser la carte tous les 100m
        //manager.requestWhenInUseAuthorization()
        manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
@@ -33,6 +33,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+       
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -40,6 +41,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         super.viewDidLoad()
         //Select current location
         let location = locations[0]
+        
         //Select precision
         let span : MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
         //Create current location
@@ -54,40 +56,79 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         //Show User on map
         self.mapView.showsUserLocation = true
         
-        //Init les point autour de lui
-        //addBubble()
-        
+       
+        createBubble()
     }
     
-    let address:[[String]] = [["Boris","37.33024596","-122.0279578","200.0"],["Naked","37.33024947","-122.0273368","20.0"],["Test","37.32475245" ,"-122.02135932","180.0"]]
+    let address:[[String]] = [["Boris","37.33024596","-122.0279578","200.0","Ceci est un message - 1"],["Naked","37.33024947","-122.0273368","20.0","Ceci est un message - 1"],["Test","37.32475245" ,"-122.02135932","180.0","Ceci est un message - 1"]]
     
-    func addBubble(_ name : String){
+    let user = Users(name: "Admin", email: "Admin@gmail.com")
+    
+    func removeBubble(_ name : String){
+        let list = user.allView
         
-        for code in address {
-            let title = code[0]
+        for code in list{
+            if(name == code.title){
+            let title = code.title
+            let coordinate = CLLocationCoordinate2DMake(code.latitude,code.longitude)
+            let regionRadius = code.radius
             
-            
-            if(title == name){
-                let coordinate = CLLocationCoordinate2DMake(Double(code[1])!,Double(code[2])!)
-                let regionRadius = Double(code[3])!
-                let regioncircle = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
-            
+            let regioncircle = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
             manager.startMonitoring(for: regioncircle)
             
             let Bubble = MKPointAnnotation()
             Bubble.coordinate = coordinate;
             Bubble.title = "\(title)";
-            mapView.addAnnotation(Bubble)
+            user.removeToview(code)
+            mapView.removeAnnotation(Bubble)
                 
-                //Vérification des radius
-                // let circle = MKCircle(center: coordinate, radius: regionRadius)
-                // MapViewMKMapView.add(circle)
             }
+        }
+    }
+    
+    func addBubble(_ name : String){
+        for code in address {
+            let title = code[0]
             
-          
+            if(title == name){
+                //creation de la list
+                let regionRadius = Double(code[3])!
+                let message = code[4]
+                let author = code[0]
+                
+                let bubbleview = BubbleMessage(title: title, message: message, author: author, latitude:Double(code[1])!, longitude: Double(code[2])!, radius: regionRadius)
+                
+                //creation list
+                user.addToView(bubbleview)
+            
+            }
         
         }
         
+    }
+    func createBubble(){
+        //lecture list
+        let list = user.allView
+        
+        for code in list{
+            
+        let title = code.title
+        let coordinate = CLLocationCoordinate2DMake(code.latitude,code.longitude)
+        let regionRadius = code.radius
+            
+        let regioncircle = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+        manager.startMonitoring(for: regioncircle)
+        
+        let Bubble = MKPointAnnotation()
+        Bubble.coordinate = coordinate;
+        Bubble.title = "\(title)";
+        mapView.addAnnotation(Bubble)
+         
+        }
+        
+        //Vérification des radius
+        // let circle = MKCircle(center: coordinate, radius: regionRadius)
+        // MapViewMKMapView.add(circle)
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -98,7 +139,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        
+        removeBubble(region.identifier)
         print("exit \(region.identifier)")
         
     }
@@ -107,6 +148,10 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         //Init les point autour de lui
         addBubble(region.identifier)
         print("enter \(region.identifier)")
+    }
+    
+    @IBAction func ButtonAction(_ sender: UIButton) {
+        print(user.allView)
     }
 }
 
