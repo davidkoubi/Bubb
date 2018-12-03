@@ -152,5 +152,7 @@ class GeolController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     @IBAction func ButtonAction(_ sender: UIButton) {
         print(user.allView)
     }
+    
+    
 }
 
