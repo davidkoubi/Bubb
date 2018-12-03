@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GeolController.swift
 //  Bubble
 //
 //  Created by Developer on 19/11/2018.
@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
+class GeolController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!
@@ -123,14 +123,14 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         Bubble.coordinate = coordinate;
         Bubble.title = "\(title)";
         mapView.addAnnotation(Bubble)
-         
+            
         }
         
         //Vérification des radius
         // let circle = MKCircle(center: coordinate, radius: regionRadius)
         // MapViewMKMapView.add(circle)
     }
-    
+   
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleRenderer = MKCircleRenderer(overlay: overlay)
         circleRenderer.strokeColor = UIColor.red
@@ -141,7 +141,6 @@ class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         removeBubble(region.identifier)
         print("exit \(region.identifier)")
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
