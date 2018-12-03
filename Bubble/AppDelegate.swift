@@ -13,7 +13,6 @@ import Parse
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "KsRKgkOv1FOdIwEMYrI7cRLhKaJpX3GRTsGFmxgc"

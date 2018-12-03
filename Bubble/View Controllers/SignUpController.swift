@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import Parse
 
-class ViewController: UIViewController {
+class SignUpController : UIViewController {
     
     
     @IBOutlet weak var UsernameTextField: UITextField!
@@ -68,8 +68,6 @@ class ViewController: UIViewController {
             loadHomeScreen()
         }
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

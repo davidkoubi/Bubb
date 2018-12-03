@@ -5,7 +5,6 @@
 //  Created by Nathan koubi on 26/11/2018.
 //  Copyright © 2018 Developer. All rights reserved.
 //
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -27,7 +26,7 @@ class LoggedInViewController: UIViewController{
     
     func loadLoginScreen(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
         self.present(viewController, animated: true, completion: nil)
     }
     
