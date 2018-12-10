@@ -13,11 +13,11 @@ import Parse
     
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let configuration = ParseClientConfiguration {
             $0.applicationId = "KsRKgkOv1FOdIwEMYrI7cRLhKaJpX3GRTsGFmxgc"
             $0.clientKey = "A8MzqpY3LjJq1DiCnOO3mNcXtIN2nAzmYo6ifsNe"
-            $0.server = "https://parseapi.back4app.com"
+            $0.server = "https://parseapi.back4app.com"//ss
         }
         Parse.initialize(with: configuration)
         saveInstallationObject()

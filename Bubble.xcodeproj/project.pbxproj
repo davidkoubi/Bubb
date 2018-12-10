@@ -10,6 +10,11 @@
 		2C8F5FCF3F494815FF4951B9 /* Pods_Bubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1926F8FB6D9C220BE094DCA8 /* Pods_Bubble.framework */; };
 		52A8657AC27966A120D91400 /* Pods_BubbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9622FB0448C71DF46E62AD /* Pods_BubbleTests.framework */; };
 		79788BD37AA8BA07A61A3B4C /* Pods_BubbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1778E75259BB1D9A67CB148C /* Pods_BubbleUITests.framework */; };
+		8F0CEB8E21BD55F400817810 /* AddBubbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CEB8D21BD55F400817810 /* AddBubbViewController.swift */; };
+		8F0CEB9021BE1D7200817810 /* BubbleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CEB8F21BE1D7200817810 /* BubbleDetailsViewController.swift */; };
+		8F4197ED21B984B50039D86A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4197EC21B984B50039D86A /* Extensions.swift */; };
+		8F5EBE9321B6DAA2006E2229 /* BubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5EBE9121B6DAA1006E2229 /* BubbleMessage.swift */; };
+		8F5EBE9421B6DAA2006E2229 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5EBE9221B6DAA1006E2229 /* Users.swift */; };
 		8FD29BA121B56D1800C88347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD29BA021B56D1800C88347 /* AppDelegate.swift */; };
 		8FD29BA321B56D1800C88347 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD29BA221B56D1800C88347 /* LoginViewController.swift */; };
 		8FD29BA621B56D1800C88347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD29BA421B56D1800C88347 /* Main.storyboard */; };
@@ -47,6 +52,11 @@
 		4FC14019C9A608DA597527B1 /* Pods-BubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleTests/Pods-BubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68947E021B48053997CF552D /* Pods-BubbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleTests/Pods-BubbleTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B76DC421586116CC5BF1357 /* Pods-BubbleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleUITests/Pods-BubbleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F0CEB8D21BD55F400817810 /* AddBubbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBubbViewController.swift; sourceTree = "<group>"; };
+		8F0CEB8F21BE1D7200817810 /* BubbleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleDetailsViewController.swift; sourceTree = "<group>"; };
+		8F4197EC21B984B50039D86A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8F5EBE9121B6DAA1006E2229 /* BubbleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleMessage.swift; sourceTree = "<group>"; };
+		8F5EBE9221B6DAA1006E2229 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		8FD29B9D21B56D1800C88347 /* Bubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD29BA021B56D1800C88347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD29BA221B56D1800C88347 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F5EBE9021B6DAA1006E2229 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F5EBE9121B6DAA1006E2229 /* BubbleMessage.swift */,
+				8F5EBE9221B6DAA1006E2229 /* Users.swift */,
+			);
+			name = Models;
+			path = ../../../Bubb/Bubble/Models;
+			sourceTree = "<group>";
+		};
 		8FD29B9421B56D1800C88347 = {
 			isa = PBXGroup;
 			children = (
@@ -123,12 +143,14 @@
 		8FD29B9F21B56D1800C88347 /* Bubble */ = {
 			isa = PBXGroup;
 			children = (
+				8F5EBE9021B6DAA1006E2229 /* Models */,
 				8FD29BD021B5705200C88347 /* ViewControllers */,
 				8FD29BA021B56D1800C88347 /* AppDelegate.swift */,
 				8FD29BA421B56D1800C88347 /* Main.storyboard */,
 				8FD29BA721B56D1900C88347 /* Assets.xcassets */,
 				8FD29BA921B56D1900C88347 /* LaunchScreen.storyboard */,
 				8FD29BAC21B56D1900C88347 /* Info.plist */,
+				8F4197EC21B984B50039D86A /* Extensions.swift */,
 			);
 			path = Bubble;
 			sourceTree = "<group>";
@@ -158,6 +180,8 @@
 				8FD29BD121B5723D00C88347 /* RegisterViewController.swift */,
 				8FD29BD321B5728F00C88347 /* GeolViewController.swift */,
 				8FD29BD521B572E100C88347 /* UserViewController.swift */,
+				8F0CEB8D21BD55F400817810 /* AddBubbViewController.swift */,
+				8F0CEB8F21BE1D7200817810 /* BubbleDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -467,8 +491,13 @@
 				8FD29BD221B5723D00C88347 /* RegisterViewController.swift in Sources */,
 				8FD29BD621B572E100C88347 /* UserViewController.swift in Sources */,
 				8FD29BD421B5728F00C88347 /* GeolViewController.swift in Sources */,
+				8F0CEB9021BE1D7200817810 /* BubbleDetailsViewController.swift in Sources */,
+				8F4197ED21B984B50039D86A /* Extensions.swift in Sources */,
+				8F0CEB8E21BD55F400817810 /* AddBubbViewController.swift in Sources */,
 				8FD29BA321B56D1800C88347 /* LoginViewController.swift in Sources */,
 				8FD29BA121B56D1800C88347 /* AppDelegate.swift in Sources */,
+				8F5EBE9321B6DAA2006E2229 /* BubbleMessage.swift in Sources */,
+				8F5EBE9421B6DAA2006E2229 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
