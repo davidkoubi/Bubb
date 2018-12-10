@@ -200,19 +200,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fRY-5q-2E3" userLabel="Register Form">
-                                <rect key="frame" x="80" y="165" width="215" height="336"/>
+                                <rect key="frame" x="80" y="165" width="215" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qb6-ab-k72" userLabel="Username">
-                                        <rect key="frame" x="0.0" y="0.0" width="215" height="105.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-6b-vb0" userLabel="Username">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="52.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5C-40-PLx" userLabel="Username Text Field">
-                                                <rect key="frame" x="0.0" y="52.5" width="215" height="53"/>
+                                                <rect key="frame" x="0.0" y="30" width="215" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -221,16 +221,16 @@
                                         <color key="backgroundColor" red="0.34733241580000002" green="0.34733241580000002" blue="0.34733241580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2bo-py-yvh" userLabel="Password">
-                                        <rect key="frame" x="0.0" y="115.5" width="215" height="105"/>
+                                        <rect key="frame" x="0.0" y="70" width="215" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z0-P4-nJG" userLabel="Password">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="52.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RD3-BQ-Ah7">
-                                                <rect key="frame" x="0.0" y="52.5" width="215" height="52.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="215" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -238,11 +238,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-9T-8Pk" userLabel="Register">
-                                        <rect key="frame" x="0.0" y="230.5" width="215" height="105.5"/>
+                                        <rect key="frame" x="0.0" y="140" width="215" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I37-1b-u6e" userLabel="Register Button">
-                                                <rect key="frame" x="0.0" y="38" width="215" height="30"/>
-                                                <state key="normal" title="Register">
+                                                <rect key="frame" x="0.0" y="15" width="215" height="30"/>
+                                                <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -260,23 +260,6 @@
                                     <constraint firstAttribute="height" constant="270" id="F2N-ep-ja8"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aNt-ng-CCS" userLabel="SignUp">
-                                <rect key="frame" x="103" y="571" width="202" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3I-5S-mfz">
-                                        <rect key="frame" x="0.0" y="6.5" width="149" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zap-pL-h9U">
-                                        <rect key="frame" x="151" y="0.0" width="51" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Sign Up"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -287,6 +270,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZXT-J0-eXF"/>
                     </view>
+                    <connections>
+                        <outlet property="SigninPasswordField" destination="RD3-BQ-Ah7" id="7PW-HJ-67r"/>
+                        <outlet property="SigninUsernameField" destination="I5C-40-PLx" id="xkS-P7-I9X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1LM-Vt-5QQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
