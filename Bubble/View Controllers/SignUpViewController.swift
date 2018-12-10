@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import Parse
 
-class SignUpController : UIViewController {
+class SignUpViewController : UIViewController {
     
     
     @IBOutlet weak var UsernameTextField: UITextField!

@@ -10,7 +10,7 @@
 		33057552B1CAB1CB69F520FC /* Pods_BubbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6795A178F1CBF1C7556F48F /* Pods_BubbleTests.framework */; };
 		89543C58DB1B4347BA7B5C07 /* Pods_Bubble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3416DC3FEC3481D247DD329 /* Pods_Bubble.framework */; };
 		8BD2C83421A2C3B30005BD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C83321A2C3B30005BD89 /* AppDelegate.swift */; };
-		8BD2C83621A2C3B30005BD89 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C83521A2C3B30005BD89 /* SignUpController.swift */; };
+		8BD2C83621A2C3B30005BD89 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C83521A2C3B30005BD89 /* SignUpViewController.swift */; };
 		8BD2C83921A2C3B30005BD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83721A2C3B30005BD89 /* Main.storyboard */; };
 		8BD2C83B21A2C3B30005BD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83A21A2C3B30005BD89 /* Assets.xcassets */; };
 		8BD2C83E21A2C3B30005BD89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2C83C21A2C3B30005BD89 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		8BD2C86421A2C7600005BD89 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86321A2C7600005BD89 /* Users.swift */; };
 		8BD2C86621A2C77B0005BD89 /* BubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2C86521A2C77B0005BD89 /* BubbleMessage.swift */; };
 		B06BD2C1E7B33BA2389F95CB /* Pods_BubbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7476C00DBF43E1C185B19C /* Pods_BubbleUITests.framework */; };
+		D86E549921B68BC200222AB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E549821B68BC200222AB6 /* LoginViewController.swift */; };
+		D86E549B21B68BE400222AB6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E549A21B68BE400222AB6 /* StartViewController.swift */; };
 		D8C2CF9921ABEEAA002CEA5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2CF9821ABEEAA002CEA5F /* Constants.swift */; };
 		D8C2CF9B21AC3911002CEA5F /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2CF9A21AC3911002CEA5F /* LoggedInViewController.swift */; };
 		D8C2CF9F21AC4913002CEA5F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2CF9E21AC4913002CEA5F /* Extensions.swift */; };
@@ -48,7 +50,7 @@
 		816E740F10387DF10440CA60 /* Pods-Bubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bubble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bubble/Pods-Bubble.release.xcconfig"; sourceTree = "<group>"; };
 		8BD2C83021A2C3B30005BD89 /* Bubble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD2C83321A2C3B30005BD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BD2C83521A2C3B30005BD89 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		8BD2C83521A2C3B30005BD89 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8BD2C83821A2C3B30005BD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BD2C83A21A2C3B30005BD89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD2C83D21A2C3B30005BD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		B6795A178F1CBF1C7556F48F /* Pods_BubbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3416DC3FEC3481D247DD329 /* Pods_Bubble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3F5311AB392C00278CDACB /* Pods-BubbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleTests/Pods-BubbleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D86E549821B68BC200222AB6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D86E549A21B68BE400222AB6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		D8C2CF9821ABEEAA002CEA5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D8C2CF9A21AC3911002CEA5F /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		D8C2CF9D21AC397A002CEA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -172,8 +176,10 @@
 		8BD2C86121A2C4070005BD89 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8BD2C83521A2C3B30005BD89 /* SignUpController.swift */,
+				8BD2C83521A2C3B30005BD89 /* SignUpViewController.swift */,
 				D8C2CF9A21AC3911002CEA5F /* LoggedInViewController.swift */,
+				D86E549821B68BC200222AB6 /* LoginViewController.swift */,
+				D86E549A21B68BE400222AB6 /* StartViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -487,9 +493,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C2CF9921ABEEAA002CEA5F /* Constants.swift in Sources */,
-				8BD2C83621A2C3B30005BD89 /* SignUpController.swift in Sources */,
+				8BD2C83621A2C3B30005BD89 /* SignUpViewController.swift in Sources */,
 				8BD2C86421A2C7600005BD89 /* Users.swift in Sources */,
 				D8C2CF9B21AC3911002CEA5F /* LoggedInViewController.swift in Sources */,
+				D86E549921B68BC200222AB6 /* LoginViewController.swift in Sources */,
+				D86E549B21B68BE400222AB6 /* StartViewController.swift in Sources */,
 				8BD2C83421A2C3B30005BD89 /* AppDelegate.swift in Sources */,
 				8BD2C86621A2C77B0005BD89 /* BubbleMessage.swift in Sources */,
 				D8C2CF9F21AC4913002CEA5F /* Extensions.swift in Sources */,

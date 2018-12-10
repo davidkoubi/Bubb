@@ -26,7 +26,7 @@ class LoggedInViewController: UIViewController{
     
     func loadLoginScreen(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpController") as! SignUpController
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         self.present(viewController, animated: true, completion: nil)
     }
     
